@@ -1,0 +1,22 @@
+# All experiment parameters live here (no magic numbers in code).
+experiment:
+  seed: 42
+  frameworks: [flask, fastapi]        # independent variable 1
+  concurrency_levels: [1, 10, 50]     # independent variable 2
+  total_requests: 200                 # requests per run
+  warmup_requests: 50                 # discarded warm-up
+  repetitions: 3                      # repeated runs per (framework, concurrency)
+  request_timeout_s: 10
+server:
+  host: 127.0.0.1
+  port: 8000
+  workers: 1                          # controlled variable: 1 worker for both
+  startup_timeout_s: 20
+data:
+  requests_file: data/sample/requests.csv
+output:
+  results_dir: results
+  raw_file: raw_latencies.csv
+  summary_file: summary.csv
+guardrails:
+  max_error_rate: 0.01                # <1% non-2xx responses
