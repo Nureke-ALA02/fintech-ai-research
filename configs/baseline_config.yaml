@@ -1,0 +1,20 @@
+project:
+  name: "fintech-ai-research"
+  authors: ["Nurkassym Nurdaulet", "Tursyn Zhaniya"]
+  version: "1.0.0"
+
+experiment:
+  seed: 42
+  task_category: "fintech_backend_algorithms"
+  timeout_seconds: 60
+
+models:
+  baseline: "human_only"
+  tested_llm: "local_deepseek_coder"
+  temperature: 0.2
+
+metrics:
+  primary: "pass_at_1"
+  guardrails:
+    - "cwe_density"
+    - "lead_time_minutes"
