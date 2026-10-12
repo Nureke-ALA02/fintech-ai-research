@@ -18,19 +18,14 @@ H1: FastAPI's p95 latency is lower than Flask's at concurrency >= 10.
 ## Repository Structure
 ```
 .
-├── configs/config.yaml     # all experiment parameters
-├── data/sample/            # 10-row sample of request parameters (full data: Week 7)
-├── docs/methodology_card.md # Methodology Passport Card
-├── docs/related_work.md    # Related Work and Research Gap
-├── notebooks/              # analysis notebooks (Week 7+)
-├── results/                # generated outputs (git-ignored)
-├── scripts/run.sh          # shell entry point
+├── configs/config.yaml
+├── scripts/run.sh
 ├── src/
-│   ├── benchmark.py        # benchmark runner
-│   ├── workload.py         # identical workload for both frameworks
-│   └── apps/               # flask_app.py, fastapi_app.py
+│   ├── benchmark.py
+│   ├── workload.py
+│   └── apps/
 ├── Dockerfile
-├── requirements.txt        # exact version pins
+├── requirements.txt
 ├── LICENSE
 └── README.md
 ```
