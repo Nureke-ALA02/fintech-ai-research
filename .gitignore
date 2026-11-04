@@ -1,43 +1,23 @@
-# Python
+# Python & Venv
 __pycache__/
 *.py[cod]
-*.egg-info/
-.venv/
 venv/
+.venv/
 env/
-.pytest_cache/
-.mypy_cache/
 
 # Jupyter
-.ipynb_checkpoints/
+.ipynb_checkpoints
 
-# Results, logs, temp
-results/*
-!results/.gitkeep
-*.log
-logs/
-tmp/
+# Data (Raw / Processed safety)
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
 
-# Large / binary data and model weights
-data/*
-!data/sample/
-!data/sample/**
-*.pkl
-*.h5
-*.pt
-*.pth
-*.onnx
-*.zip
-*.parquet
-
-# Secrets
-.env
-*.key
-*.pem
-secrets.*
-
-# OS / IDE
+# Outputs & OS
+outputs/figures/*
+outputs/tables/*
 .DS_Store
-Thumbs.db
-.idea/
 .vscode/
+.idea/
+*.log
