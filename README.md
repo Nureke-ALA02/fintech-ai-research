@@ -89,24 +89,44 @@ The benchmark is intended to support reproducible computational performance eval
 
 ```text
 fintech-ai-research/
-├── config.yaml
 ├── data/
 │   ├── raw/
-│   │   ├── survey_responses.csv
-│   │   └── test_run.jsonl
 │   └── processed/
 │       └── cleaned_dataset.csv
+├── docs/
+│   └── domain_model.md
+├── notebooks/
+│   └── 01_exploratory_analysis.ipynb
+├── outputs/
+│   └── tables/
+│       ├── benchmark_metrics.jsonl
+│       ├── benchmark_run.jsonl
+│       ├── hypothesis_results.csv
+│       └── metrics_summary.csv
+├── reports/
 ├── src/
 │   ├── data/
+│   │   ├── __init__.py
 │   │   └── data_loader.py
 │   ├── features/
+│   │   ├── __init__.py
 │   │   └── build_features.py
-│   └── benchmark.py
+│   ├── stats/
+│   │   ├── __init__.py
+│   │   └── hypothesis_testing.py
+│   ├── __init__.py
+│   ├── benchmark_runner.py
+│   ├── process_data.py
+│   └── visualize.py
 ├── tests/
-│   └── test_*.py
-├── requirements.txt
+│   ├── test_benchmark.py
+│   └── test_data_loader.py
 ├── .gitignore
-└── README.md
+├── Dockerfile
+├── docker-compose.yml
+├── LICENSE
+├── README.md
+└── requirements.txt
 ```
 
 *Note: The structure above describes the intended project layout. Some files, including raw datasets and generated outputs, may not exist until the corresponding workflow has been executed.*
